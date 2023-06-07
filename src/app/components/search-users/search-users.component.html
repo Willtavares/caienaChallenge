@@ -1,0 +1,69 @@
+<nb-layout>
+  <nb-layout-header class="box_layout">
+    <nb-card class="header">
+      <nb-card-body class="body_search">
+        <img
+          class="logo"
+          src="../../../assets/images/github.png"
+          alt=""
+        >
+        <input
+          type="text"
+          [(ngModel)]="name"
+          placeholder="Search your user here"
+          (input)="onSearch()"
+        >
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-header>
+  <nb-layout-column>
+    <nb-card *ngIf="status === 0">
+      <nb-card-body>
+        <div class="box">
+          <iframe src="https://embed.lottiefiles.com/animation/81333"></iframe>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card *ngIf="status === 200">
+      <nb-card-body class="box_layout">
+        <ng-layout>
+          <nb-layout-column class="details">
+            <div>
+              <img
+                class="avatar"
+                src="{{user?.avatar_url}}"
+                alt=""
+              >
+            </div>
+            <div>
+              <a
+                href="{{user?.html_url}}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{user?.html_url}}</a>
+              <p>Following <span class="format following">{{user?.following}}</span></p>
+              <p>Followers <span class="format followers">{{user?.followers}}</span></p>
+              <p>Public Repos <span class="format public_repos">{{user?.public_repos}}</span></p>
+            </div>
+
+
+
+          </nb-layout-column>
+        </ng-layout>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card *ngIf="status === 404">
+      <nb-card-body>
+        <div class="box">
+          <iframe src="https://embed.lottiefiles.com/animation/81122"></iframe>
+        </div>
+      </nb-card-body>
+      <nb-card-footer>
+        <h3>Não foi encontrado usuário com o nome de {{name}}</h3>
+      </nb-card-footer>
+    </nb-card>
+  </nb-layout-column>
+  <nb-layout-footer></nb-layout-footer>
+</nb-layout>
