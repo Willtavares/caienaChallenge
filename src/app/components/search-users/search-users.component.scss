@@ -1,0 +1,65 @@
+.box {
+  display: flex;
+  justify-content: center;
+}
+.box_layout {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  margin-bottom: inherit;
+  .body_search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.format {
+  padding: 0 10px;
+  border-radius: 6px;
+  color: white;
+}
+.following {
+  background-color: #3c9eda;
+}
+.followers {
+  background-color: #3cda73;
+}
+.public_repos {
+  background-color: #da5c3c;
+}
+
+iframe {
+  width: 500px;
+  height: 500px;
+  border: none;
+}
+
+.logo {
+  width: 8%;
+  padding-right: 5px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.avatar {
+  width: 135px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+input {
+  width: 85%;
+  border-radius: 13px;
+  border: 1px solid gray;
+  padding-left: 15px;
+}
+
+h3 {
+  text-align: center;
+}
