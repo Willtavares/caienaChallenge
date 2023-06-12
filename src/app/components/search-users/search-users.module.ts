@@ -5,6 +5,7 @@ import {
   NbCardModule,
   NbContextMenuModule,
   NbLayoutModule,
+  NbThemeService,
 } from '@nebular/theme';
 import { SearchUsersComponent } from './search-users.component';
 
@@ -17,6 +18,7 @@ import { SearchUsersComponent } from './search-users.component';
     NbCardModule,
     NbContextMenuModule,
   ],
+  providers: [NbThemeService],
   exports: [SearchUsersComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
